@@ -5,6 +5,7 @@ import bo.edu.ucb.est.listaV2.Node;
 import bo.edu.ucb.est.listaV2.SimpleList;
 import bo.edu.ucb.est.listaV2.Student;
 import bo.edu.ucb.est.listaV2.Teacher;
+import java.util.ArrayList;
 
 /**
  * Hello world!
@@ -12,8 +13,25 @@ import bo.edu.ucb.est.listaV2.Teacher;
  */
 public class App 
 {
-
     public static void main( String[] args ) {
+        Teacher teacher1 = new Teacher("Orlando Rivera", "Ing. de Sistemas ");
+        Teacher teacher2 = new Teacher("Miguel Villarroel", "Lic. en Informatica");
+        Teacher t3 = new Teacher("fullName", "");
+
+        SimpleList<Teacher> teacherList = new SimpleList<>();
+        teacherList.add(teacher1);
+        teacherList.add(teacher2);
+        teacherList.print();
+
+        System.out.println(teacherList.getData(1));
+        System.out.println(teacherList.contains(t3));
+        teacherList.remove(0);
+        teacherList.print();
+
+
+    }
+
+    public static void prueba2(){
         Teacher teacher1 = new Teacher("Orlando Rivera", "Ing. de Sistemas ");
         Teacher teacher2 = new Teacher("Miguel Villarroel", "Lic. en Informatica");
 
@@ -39,8 +57,12 @@ public class App
         dateList.add(new Date());
         dateList.print();
     }
-
- //   public static void main( String[] args )
+    public static void list1(){
+        ArrayList<Integer> a = new ArrayList<>();
+        a.add(1);
+        a.remove(1);
+        a.remove(null);
+    }
     public static void listaSimple()
     {
        Lista listaAlumnos  = new Lista();
